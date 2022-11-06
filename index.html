@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator JS</title>
+    <style>
+        @media only screen and (min-width: 760px){
+            br{
+                display: none;
+            }
+        }
+        @media only screen and (min-width: 374px) and (max-width: 430px) {
+            br{
+                display: block;
+            }   
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <form name="formcalc">
+            <input type="text" name="txtnum1"> <br>
+            + <br>
+            <input type="text" name="txtnum2"> <br><br>
+            <button type="button" onclick="sumValues()">=</button> <br><br>
+            <!-- <input type="button" value="Calculate" onclick="sumValues()"> -->
+            <input type="text" name="txtres">
+            
+        </form>
+    </center>
+    <script>
+        function sumValues(){
+            var num1,num2,res;
+            num1=Number(document.formcalc.txtnum1.value);
+            num2=Number(document.formcalc.txtnum2.value);
+            res=num1+num2;
+            document.formcalc.txtres.value=res;
+        }
+    </script>
+</body>
+</html>
